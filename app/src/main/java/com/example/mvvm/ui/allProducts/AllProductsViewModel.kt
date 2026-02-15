@@ -1,6 +1,5 @@
-package com.example.mvvm
+package com.example.mvvm.ui.allProducts
 import android.content.Context
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

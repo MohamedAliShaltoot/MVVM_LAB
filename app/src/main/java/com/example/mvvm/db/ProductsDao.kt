@@ -8,19 +8,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.mvvm.data.model.Product
 
-
-//@Dao
-//interface ProductsDao {
-//    @Insert(onConflict = OnConflictStrategy.Companion.IGNORE)
-//     fun inertProduct(product: Product)
-//
-//    @Query("SELECT * FROM products")
-//     fun products(): LiveData<MutableList<Product>>
-//
-//    @Delete
-//    fun deleteProduct(product: Product)
-//}
-
 @Dao
 interface ProductsDao {
 

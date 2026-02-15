@@ -19,6 +19,11 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.*
+import com.example.mvvm.ui.allProducts.AllMoviesScreen
+import com.example.mvvm.ui.allProducts.AllProductsViewModel
+import com.example.mvvm.ui.allProducts.AllProductsViewModelFactory
+import com.example.mvvm.ui.fav.AllFavViewModel
+import com.example.mvvm.ui.fav.FavMoviesScreen
 import kotlin.system.exitProcess
 
 
@@ -73,15 +78,7 @@ fun MyApp() {
         }
     }
 
-
-
-
-
-
 }
-
-
-
 
 @Composable
 fun MainScreen(navController: NavController) {

@@ -1,51 +1,4 @@
-//package com.example.mvvm
-//
-//import android.os.Bundle
-//import android.widget.Toast
-//import androidx.appcompat.app.AppCompatActivity
-//import androidx.lifecycle.Observer
-//import com.example.architecturedesignpattern.data.datasource.local.ProductLocalDataSource
-//import com.example.mvvm.data.model.Product
-//
-//
-//
-//class FavActivity : AppCompatActivity(), OnFavoriteClickListener{
-////    var favRecycler: RecyclerView? = null
-////    var favAdapter: FavAdapter? = null
-//    var productLocalDataSource: ProductLocalDataSource? = null
-//    //var favPresneter: FavPresenter? = null
-//    lateinit var allFavViewModel : AllFavViewModel
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-////        setContentView(R.layout.activity_fav_products)
-////        favRecycler = findViewById<RecyclerView>(R.id.rvFavMovies)
-////        favAdapter = FavAdapter(this)
-////        favRecycler!!.setAdapter(favAdapter)
-//        allFavViewModel = AllFavViewModel(getApplicationContext())
-//        allFavViewModel.favProducts()?.observe(
-//            this,
-//            { products ->
-//                //favAdapter!!.setProducts(products)
-//            }
-//        )
-//        allFavViewModel.deletedMsg.observe(this,{
-//            onProductDeleted()
-//        })
-//    }
-//
-//     override fun onClick(product: Product) {
-//         allFavViewModel.deleteProductFromFav(product)
-//    }
-//
-//     fun onProductDeleted() {
-//        Toast.makeText(
-//            this@FavActivity,
-//            " deleted from favourite",
-//            Toast.LENGTH_SHORT
-//        ).show()
-//    }
-//}
-package com.example.mvvm
+package com.example.mvvm.ui.fav
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -77,26 +30,6 @@ import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.mvvm.data.model.Product
-
-
-//class FavMoviesActivity : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContent {
-//            val viewModel: AllFavViewModel = viewModel()
-//
-//            FavMoviesScreen(
-//                products = viewModel.favProducts()?.observeAsState()?.value ?: emptyList(),
-//                error = viewModel.deletedMsg.observeAsState().value,
-//                deleteFromFav = {
-//                    viewModel.deleteProductFromFav(it)
-//                }
-//            )
-//
-//        }
-//    }
-//}
-
 @Composable
 fun FavMoviesScreen(
     products: List<Product>,
@@ -120,12 +53,6 @@ fun FavMoviesScreen(
             }
         }
 
-        // Loading state
-//        if (isLoading) {
-//            CircularProgressIndicator(
-//                modifier = Modifier.align(Alignment.Center)
-//            )
-//        }
 
         // Error state
         if (error != null) {

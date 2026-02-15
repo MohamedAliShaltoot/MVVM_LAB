@@ -6,28 +6,6 @@ import com.example.mvvm.data.datasource.local.ProductLocalDataSource
 import com.example.mvvm.data.datasource.remote.ProductRemoteDataSource
 import com.example.mvvm.data.model.Product
 
-//class ProductRepository(context: Context) {
-//    private val productRemoteDataSource: ProductRemoteDataSource = ProductRemoteDataSource()
-//    private val productLocalDataSource: ProductLocalDataSource = ProductLocalDataSource(context)
-//
-//    suspend fun getProducts(): List<Product> {
-//        return productRemoteDataSource.getProducts()
-//    }
-//
-//
-//    fun favProducts(): LiveData<MutableList<Product>>
-//    {
-//      return productLocalDataSource.products()
-//    }
-//
-//      fun insertProduct(product: Product) {
-//        productLocalDataSource.insertProduct(product)
-//    }
-//
-//     fun deleteProduct(product: Product) {
-//        productLocalDataSource.deleteProduct(product)
-//    }
-//}
 class ProductRepository(context: Context) {
 
     private val productRemoteDataSource = ProductRemoteDataSource()

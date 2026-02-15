@@ -10,16 +10,6 @@ import com.example.mvvm.network.Network
 class ProductRemoteDataSource {
     private val productService: ProductService? = Network.instance?.productService
 
-//
-
-//    init {
-//        productService = instance!!.productService!!
-//    }
-
-//   suspend fun getProducts() : List<Product> {
-//       val list = productService.products().products ?: emptyList()
-//       return list
-//    }
     suspend fun getProducts(): List<Product> {
         println("API CALL STARTED")
 

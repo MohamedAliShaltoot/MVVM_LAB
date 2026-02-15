@@ -1,4 +1,4 @@
-package com.example.mvvm
+package com.example.mvvm.ui.fav
 
 import android.content.Context
 import androidx.lifecycle.LiveData

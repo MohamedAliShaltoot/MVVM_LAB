@@ -6,30 +6,6 @@ import com.example.mvvm.data.model.Product
 import com.example.mvvm.db.AppDataBase
 import com.example.mvvm.db.ProductsDao
 
-//class ProductLocalDataSource(context: Context) {
-//    var productsDao: ProductsDao
-//
-//    init {
-//        productsDao = AppDataBase.getInstance(context).productsDao()
-//    }
-//
-//     fun insertProduct(product: Product) {
-//
-//            productsDao.inertProduct(product)
-//
-//    }
-//
-//    fun deleteProduct(product: Product) {
-//
-//            productsDao.deleteProduct(product)
-//
-//    }
-//
-//    fun products() : LiveData<MutableList<Product>>{
-//        return productsDao.products()
-//    }
-//
-//}
 class ProductLocalDataSource(context: Context) {
 
     private val productsDao = AppDataBase.getInstance(context).productsDao()

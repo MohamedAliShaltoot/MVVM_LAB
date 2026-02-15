@@ -1,4 +1,4 @@
-package com.example.mvvm
+package com.example.mvvm.ui.allProducts
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -19,7 +19,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardElevation
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -33,25 +32,6 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.mvvm.data.model.Product
 
-
-//class AllProductsActivity : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContent {
-//            val viewModel: AllProductsViewModel = viewModel()
-//
-//
-//            AllMoviesScreen(
-//                products = viewModel.allProduct.observeAsState().value ?: emptyList(),
-//                error = viewModel.error.observeAsState().value,
-//                addToFav = {
-//                    viewModel.insertProductToFav(it)
-//                }
-//            )
-//        }
-//
-//    }
-//}
 
 @Composable
 fun AllMoviesScreen(
@@ -75,20 +55,6 @@ fun AllMoviesScreen(
                 }
             }
         }
-
-//        Text(
-//            text = "error",
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .wrapContentSize(Alignment.Center),
-//            textAlign = TextAlign.Center
-//        )
-        // Loading state
-//        if (isLoading) {
-//            CircularProgressIndicator(
-//                modifier = Modifier.align(Alignment.Center)
-//            )
-//        }
 
         // Error state
         if (error != null) {
